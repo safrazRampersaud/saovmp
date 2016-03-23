@@ -35,9 +35,12 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs (abstracted)
 
 (IV)	Three data files have been uploaded for the variations in the server environment abstraction:
-		(a)	serverExp_300		- Server file consisting of 300 servers with identified capacities on CPUs & Memory
-		(b)	serverExp_500		- Server file consisting of 500 servers with identified capacities on CPUs & Memory
-		(c)	serverExp_1000		- Server file consisting of 1000 servers with identified capacities on CPUs & Memory
+		(a)	serverExp_300		- Server file consisting of 300 servers 
+						  with identified capacities on CPUs & Memory
+		(b)	serverExp_500		- Server file consisting of 500 servers 
+						  with identified capacities on CPUs & Memory
+		(c)	serverExp_1000		- Server file consisting of 1000 servers 
+						  with identified capacities on CPUs & Memory
 
 		Each of the files consists of the following data orginization:
 			(1)	CPU capacity in cores (abstracted) in the 1st column
