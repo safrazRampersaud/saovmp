@@ -45,10 +45,10 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 		Each of the files consists of the following data orginization:
 			(1)	CPU capacity in cores (abstracted) in the 1st column
 			(2)	Memory capacity in GBs (abstracted) in the 2nd column
-			(3)	Count of servers (abstracted) with tuple ((1), (2)) server resource combination in 3rd column
+			(3)	Count of servers (abstracted) with tuple ((1), (2)) 
+				server resource combination in 3rd column
 									  
 (V)	Three folders have been uploaded for the variations on the VM request stream abstraction:
-
 		(a)	300			- 11 various vm input files consisting of 300 VMs in request stream 
 		(b) 	500			- 11 various vm input files consisting of 500 VMs in request stream
 		(c)	1000			- 11 various vm input files consisting of 1000 VMs in request stream						
@@ -57,5 +57,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 			(1)	VM type from Google Compute Engine (abstracted) in the 1st column
 			(2)	CPU request in cores (abstracted) in the 2nd column 
 			(3)	Memory request in GBs (abstracted) in the 3rd column
-			(4)	Maximum amount of (IV.3) memory which can be shared in GBs (abstracted) in the 4th column 
-			(5)	Maximum amount of (IV.3) memory which is not sharable in GBs (abstracted) in the 5th column 
+			(4)	Maximum amount of (IV.3) memory which can be shared in GBs 
+				(abstracted) in the 4th column 
+			(5)	Maximum amount of (IV.3) memory which is not sharable in GBs 
+				(abstracted) in the 5th column 
