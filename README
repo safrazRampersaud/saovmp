@@ -1,52 +1,56 @@
 README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SIMULATION
 ----------------------------------------------------------------------------------------
-(I)		Compilation from Project ZIP download
+(I)	Compilation from Direct Repository ZIP download (saovmp_repository) 
 (II)	Execution
 (III)	Required Files
 (IV)	Server Data Set Inputs
-(V)		VM Data Set Inputs
+(V)	VM Data Set Inputs
 ----------------------------------------------------------------------------------------
-(I)		@user > g++ -std=c++11 -o saovmp saovmp.cpp
+(I)	@user > g++ -std=c++11 -o saovmp saovmp.cpp
 
 (II) 	@user > (executable) (vm input) (server input)
-		Ex:	@user > saovmp vmExp_300_100_5 serverExp_300
+	Ex:	@user > saovmp vmExp_300_100_5 serverExp_300
 
-		Execution should follow pattern: "@user > saovmp vmExp_X00_100_5 serverExp_X00" where X = {3,5,10}.  
-		See (IV) and (V) for more details.
+	Execution should follow pattern: "@user > saovmp vmExp_X00_100_5 serverExp_X00" where X = {3,5,10}.  
+	See (IV) and (V) for more details.
 		
 (III)	.hpp files:
-		(a)	saovmp_consts.hpp 		- stores constant values throughout saovmp simulation in namespace
-		(b)	saovmp_model.hpp		- stores all sharing-(aware/oblivious) algorithms for 
-									  simulation and processes the results for reporting
-		(c)	srv_model.hpp			- server abstraction file for saovmp simulation 
-		(c)	vms_model.hpp			- virtual machine (vm) abstraction file for saovmp simulation including 
-									  vm characteristic loading
-		resource files:
-		(a)	VM_assign_AP			- Constraint matrix file for identifying legal applications (abstracted) VMs may choose
-		(b)	VM_assign_EnumAP		- Constraint array file for identifying legal count of applications (abstracted) VMs may choose
-		(c)	VM_assign_OS			- Constraint matrix file for identifying legal operating systems (abstracted) VMs may choose
-		(d)	getApplicationPages 	- Component file for application (abstracted) pages expressed in bits
-		(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages expressed in bits
-		(f)	vmTypes					- Enumeration file for Google Compute Engine VMs (abstracted)
+	(a)	saovmp_consts.hpp 		- stores constant values throughout saovmp simulation in namespace
+	(b)	saovmp_model.hpp		- stores all sharing-(aware/oblivious) algorithms for 
+						  simulation and processes the results for reporting
+	(c)	srv_model.hpp			- server abstraction file for saovmp simulation 
+	(c)	vms_model.hpp			- virtual machine (vm) abstraction file for saovmp simulation including 
+						  vm characteristic loading
+	resource files:
+	(a)	VM_assign_AP			- Constraint matrix file for identifying legal applications (abstracted) 
+						  VMs may choose thoughout experiment
+	(b)	VM_assign_EnumAP		- Constraint array file for identifying legal count of applications (abstracted) 
+						  VMs may choose thoughout experiment
+	(c)	VM_assign_OS			- Constraint matrix file for identifying legal operating systems (abstracted) 
+						  VMs may choose
+	(d)	getApplicationPages 		- Component file for application (abstracted) pages expressed in bits
+	(e)	getOperatingSystemPages 	- Component file for operating system (abstracted) pages expressed in bits
+	(f)	vmTypes				- Enumeration file for Google Compute Engine VMs (abstracted)
 
 (IV)	Three data files have been uploaded for the variations in the server environment abstraction:
-		(a)	serverExp_300			- Server file consisting of 300 servers with identified capacities on CPUs & Memory
-		(b)	serverExp_500			- Server file consisting of 500 servers with identified capacities on CPUs & Memory
-		(c)	serverExp_1000			- Server file consisting of 1000 servers with identified capacities on CPUs & Memory
+		(a)	serverExp_300		- Server file consisting of 300 servers with identified capacities on CPUs & Memory
+		(b)	serverExp_500		- Server file consisting of 500 servers with identified capacities on CPUs & Memory
+		(c)	serverExp_1000		- Server file consisting of 1000 servers with identified capacities on CPUs & Memory
 
 		Each of the files consists of the following data orginization:
-									(1)	CPU capacity in cores (abstracted) in the 1st column
-									(2)	Memory capacity in GBs (abstracted) in the 2nd column
-									(3)	Count of servers (abstracted) with tuple ((1), (2)) server resource combination in 3rd column
+			(1)	CPU capacity in cores (abstracted) in the 1st column
+			(2)	Memory capacity in GBs (abstracted) in the 2nd column
+			(3)	Count of servers (abstracted) with tuple ((1), (2)) server resource combination in 3rd column
 									  
 (IV)	Three folders have been uploaded for the variations on the VM request stream abstraction:
-		(a)	300						- 11 various vm input files consisting of 300 VMs in request stream 
-		(b) 500						- 11 various vm input files consisting of 500 VMs in request stream
-		(c)	1000					- 11 various vm input files consisting of 1000 VMs in request stream						
+
+		(a)	300			- 11 various vm input files consisting of 300 VMs in request stream 
+		(b) 	500			- 11 various vm input files consisting of 500 VMs in request stream
+		(c)	1000			- 11 various vm input files consisting of 1000 VMs in request stream						
 									  
 		Each of the files consists of the following data orginization:
-									(1)	VM type from Google Compute Engine (abstracted) in the 1st column
-									(2)	CPU request in cores (abstracted) in the 2nd column 
-									(3)	Memory request in GBs (abstracted) in the 3rd column
-									(4)	Maximum amount of (IV.3) memory which can be shared in GBs (abstracted) in the 4th column 
-									(5)	Maximum amount of (IV.3) memory which is not sharable in GBs (abstracted) in the 5th column 
+			(1)	VM type from Google Compute Engine (abstracted) in the 1st column
+			(2)	CPU request in cores (abstracted) in the 2nd column 
+			(3)	Memory request in GBs (abstracted) in the 3rd column
+			(4)	Maximum amount of (IV.3) memory which can be shared in GBs (abstracted) in the 4th column 
+			(5)	Maximum amount of (IV.3) memory which is not sharable in GBs (abstracted) in the 5th column 
