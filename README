@@ -28,8 +28,10 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 					  (abstracted) VMs may choose thoughout experiment
 	(c)	VM_assign_OS		- Constraint matrix file for identifying legal operating systems 
 					  (abstracted) VMs may choose
-	(d)	getApplicationPages 	- Component file for application (abstracted) pages expressed in bits
-	(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages expressed in bits
+	(d)	getApplicationPages 	- Component file for application (abstracted) pages 
+					  expressed in bits
+	(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages 
+					  expressed in bits
 	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs (abstracted)
 
 (IV)	Three data files have been uploaded for the variations in the server environment abstraction:
