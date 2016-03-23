@@ -14,14 +14,14 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	Execution should follow pattern: "@user > saovmp vmExp_X00_100_5 serverExp_X00" where X = {3,5,10}.  
 	See (IV) and (V) for more details.
 		
-(III)	.hpp files:
+(III)	.hpp files: [HPP]
 	(a)	saovmp_consts.hpp 		- stores constant values throughout saovmp simulation in namespace
 	(b)	saovmp_model.hpp		- stores all sharing-(aware/oblivious) algorithms for 
 						  simulation and processes the results for reporting
 	(c)	srv_model.hpp			- server abstraction file for saovmp simulation 
 	(c)	vms_model.hpp			- virtual machine (vm) abstraction file for saovmp simulation including 
 						  vm characteristic loading
-	resource files:
+	resource files: [RESOURCES]
 	(a)	VM_assign_AP			- Constraint matrix file for identifying legal applications (abstracted) 
 						  VMs may choose thoughout experiment
 	(b)	VM_assign_EnumAP		- Constraint array file for identifying legal count of applications (abstracted) 
@@ -42,7 +42,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 			(2)	Memory capacity in GBs (abstracted) in the 2nd column
 			(3)	Count of servers (abstracted) with tuple ((1), (2)) server resource combination in 3rd column
 									  
-(IV)	Three folders have been uploaded for the variations on the VM request stream abstraction:
+(V)	Three folders have been uploaded for the variations on the VM request stream abstraction:
 
 		(a)	300			- 11 various vm input files consisting of 300 VMs in request stream 
 		(b) 	500			- 11 various vm input files consisting of 500 VMs in request stream
