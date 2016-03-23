@@ -48,10 +48,10 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 			(3)	Count of servers (abstracted) with tuple ((1), (2)) 
 				server resource combination in 3rd column
 									  
-(V)	Three folders have been uploaded for the variations on the VM request stream abstraction:
-		(a)	300		- 11 various vm input files consisting of 300 VMs in request stream 
-		(b) 	500		- 11 various vm input files consisting of 500 VMs in request stream
-		(c)	1000		- 11 various vm input files consisting of 1000 VMs in request stream						
+(V)	Three folders have been uploaded for the variations on the VM request input abstraction:
+		(a)	300		- 11 various vm input files consisting of 300 VMs in input 
+		(b) 	500		- 11 various vm input files consisting of 500 VMs in input
+		(c)	1000		- 11 various vm input files consisting of 1000 VMs in input						
 									  
 		Each of the files consists of the following data orginization:
 			(1)	VM type from Google Compute Engine (abstracted) in the 1st column
