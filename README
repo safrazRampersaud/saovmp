@@ -20,7 +20,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 						  simulation and processes the results for reporting
 	(c)	srv_model.hpp			- server abstraction file for saovmp simulation 
 	(c)	vms_model.hpp			- virtual machine (vm) abstraction file for saovmp simulation including 
-						  vm characteristic loading
+						 vm characteristic loading
 	resource files: [RESOURCES]
 	(a)	VM_assign_AP			- Constraint matrix file for identifying legal applications (abstracted) 
 						  VMs may choose thoughout experiment
