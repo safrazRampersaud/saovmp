@@ -11,7 +11,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 (II) 	@user > (executable) (vm input) (server input)
 	Ex:	@user > saovmp vmExp_300_100_5 serverExp_300
 
-	Execution should follow pattern: "@user > saovmp vmExp_X00_100_5 serverExp_X00" where X = {3,5,10}.  
+	Execution should follow pattern: "@user > saovmp vmExp_X_100_5 serverExp_X" where X = {300,500,1000}.  
 	See (IV) and (V) for more details.
 		
 (III)	.hpp files: [HPP]
@@ -35,12 +35,12 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs (abstracted)
 
 (IV)	Three data files have been uploaded for the variations in the server environment abstraction:
-		(a)	serverExp_300		- Server file consisting of 300 servers 
-						  with identified capacities on CPUs & Memory
-		(b)	serverExp_500		- Server file consisting of 500 servers 
-						  with identified capacities on CPUs & Memory
-		(c)	serverExp_1000		- Server file consisting of 1000 servers 
-						  with identified capacities on CPUs & Memory
+		(a)	serverExp_300	- Server file consisting of 300 servers 
+					  with identified capacities on CPUs & Memory
+		(b)	serverExp_500	- Server file consisting of 500 servers 
+					  with identified capacities on CPUs & Memory
+		(c)	serverExp_1000	- Server file consisting of 1000 servers 
+					  with identified capacities on CPUs & Memory
 
 		Each of the files consists of the following data orginization:
 			(1)	CPU capacity in cores (abstracted) in the 1st column
@@ -49,9 +49,9 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 				server resource combination in 3rd column
 									  
 (V)	Three folders have been uploaded for the variations on the VM request stream abstraction:
-		(a)	300			- 11 various vm input files consisting of 300 VMs in request stream 
-		(b) 	500			- 11 various vm input files consisting of 500 VMs in request stream
-		(c)	1000			- 11 various vm input files consisting of 1000 VMs in request stream						
+		(a)	300		- 11 various vm input files consisting of 300 VMs in request stream 
+		(b) 	500		- 11 various vm input files consisting of 500 VMs in request stream
+		(c)	1000		- 11 various vm input files consisting of 1000 VMs in request stream						
 									  
 		Each of the files consists of the following data orginization:
 			(1)	VM type from Google Compute Engine (abstracted) in the 1st column
