@@ -15,22 +15,22 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	See (IV) and (V) for more details.
 		
 (III)	.hpp files: [HPP]
-	(a)	saovmp_consts.hpp 		- stores constant values throughout saovmp simulation in namespace
-	(b)	saovmp_model.hpp		- stores all sharing-(aware/oblivious) algorithms for 
-						  simulation and processes the results for reporting
-	(c)	srv_model.hpp			- server abstraction file for saovmp simulation 
-	(c)	vms_model.hpp			- virtual machine (vm) abstraction file for saovmp simulation including 
-						 vm characteristic loading
+	(a)	saovmp_consts.hpp 	- stores constant values throughout saovmp simulation in namespace
+	(b)	saovmp_model.hpp	- stores all sharing-(aware/oblivious) algorithms for 
+					  simulation and processes the results for reporting
+	(c)	srv_model.hpp		- server abstraction file for saovmp simulation 
+	(c)	vms_model.hpp		- virtual machine (vm) abstraction file for saovmp simulation including 
+					  vm characteristic loading
 	resource files: [RESOURCES]
-	(a)	VM_assign_AP			- Constraint matrix file for identifying legal applications (abstracted) 
-						  VMs may choose thoughout experiment
-	(b)	VM_assign_EnumAP		- Constraint array file for identifying legal count of applications (abstracted) 
-						  VMs may choose thoughout experiment
-	(c)	VM_assign_OS			- Constraint matrix file for identifying legal operating systems (abstracted) 
-						  VMs may choose
-	(d)	getApplicationPages 		- Component file for application (abstracted) pages expressed in bits
-	(e)	getOperatingSystemPages 	- Component file for operating system (abstracted) pages expressed in bits
-	(f)	vmTypes				- Enumeration file for Google Compute Engine VMs (abstracted)
+	(a)	VM_assign_AP		- Constraint matrix file for identifying legal applications (abstracted) 
+				          VMs may choose thoughout experiment
+	(b)	VM_assign_EnumAP	- Constraint array file for identifying legal count of applications (abstracted) 
+					  VMs may choose thoughout experiment
+	(c)	VM_assign_OS		- Constraint matrix file for identifying legal operating systems (abstracted) 
+					  VMs may choose
+	(d)	getApplicationPages 	- Component file for application (abstracted) pages expressed in bits
+	(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages expressed in bits
+	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs (abstracted)
 
 (IV)	Three data files have been uploaded for the variations in the server environment abstraction:
 		(a)	serverExp_300		- Server file consisting of 300 servers with identified capacities on CPUs & Memory
