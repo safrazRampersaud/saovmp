@@ -11,7 +11,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 (II) 	@user > (executable) (vm input) (server input)
 	Ex:	@user > saovmp vmExp_300_100_5 serverExp_300
 
-	Execution should follow pattern: "@user > saovmp vmExp_X_100_5 serverExp_X" where X = {300,500,1000}.  
+	Execution pattern: "@user > saovmp vmExp_X_100_5 serverExp_X" where X = {300,500,1000}.  
 	See (IV) and (V) for more details.
 		
 (III)	.hpp files: [HPP]
