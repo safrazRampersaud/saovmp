@@ -1,0 +1,19 @@
+VM Input File:		vmExp_300_100_5
+Server Input File:	serverExp_300
+
+********** Total Active Servers Per Allocation Strategy **********
+NFS:	46	FFS:	43	BFS:	43	WFS:	62	RFS:	195
+NF :	48	FF :	44	BF :	45	WF :	45	RF :	203	
+
+******************** Total Active Servers Per Server Type ( CPU in Cores, MEM in GBs ) ********************
+		(12 , 64)	(24 , 32)	(24 , 64)	(24 , 128)	(24 , 192)	(24 , 256)	(48 , 128)	(48 , 256)	
+NFS:		3			2			41			0			0			0			0			0			
+FFS:		3			2			38			0			0			0			0			0			
+BFS:		3			2			38			0			0			0			0			0			
+WFS:		0			0			0			17			24			1			1			19			
+RFS:		3			1			54			108			17			1			1			10			
+NF :		3			2			43			0			0			0			0			0			
+FF :		3			2			39			0			0			0			0			0			
+BF :		3			2			40			0			0			0			0			0			
+WF :		0			0			0			0			24			1			1			19			
+RF :		2			2			60			112			14			0			1			12			
