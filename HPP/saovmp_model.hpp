@@ -13,7 +13,8 @@ class saovmp_model
 		saovmp_model();
 		~saovmp_model();
 		
-		void initPrototype(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S), std::string vmInputFile, std::string serverInputFile);
+		void initPrototype(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S), 
+								      std::string vmInputFile, std::string serverInputFile);
 		void prepareInputs(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S));		
 		void generateResults(std::string inputVMFile, std::string inputServerFile);
 		
@@ -47,8 +48,10 @@ class saovmp_model
 		
 		void sharing_per_server(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S));		
 		void non_sharing_per_server(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S));			
-		void process_allocation(std::vector<vms_model> &(process_V), std::vector<srv_model> &(process_S), algorithms strat);
-		void server_resource_scarcity(std::vector<vms_model> &(calc_scarcity_V), std::vector<srv_model> &(calc_scarcity_S), algorithms strat);
+		void process_allocation(std::vector<vms_model> &(process_V), 
+					std::vector<srv_model> &(process_S), algorithms strat);
+		void server_resource_scarcity(std::vector<vms_model> &(calc_scarcity_V), 
+					      std::vector<srv_model> &(calc_scarcity_S), algorithms strat);
 };
 
 saovmp_model::saovmp_model() : scarcity_metric(0.00), idx(-1), allocated(false)
@@ -271,8 +274,8 @@ void saovmp_model::nextFitSharing()
 			if(nfs_srv[activeServer].active == -1)		//	inactive signal
 				nfs_srv[activeServer].active = 1;		//	active signal
 				
-			if(	(	(nfs_srv[activeServer].cpuCap - nfs_vms[j].cpuReq) >= 0.00) && 
-				(	(nfs_srv[activeServer].memCap - nfs_vms[j].memReq + nfs_vms[j].sharing[activeServer] >= 0.00)) &&
+			if(	((nfs_srv[activeServer].cpuCap - nfs_vms[j].cpuReq) >= 0.00) && 
+				((nfs_srv[activeServer].memCap - nfs_vms[j].memReq + nfs_vms[j].sharing[activeServer] >= 0.00)) &&
 					(nfs_srv[activeServer].active == 1))
 			{
 				for(int pii = 0; pii < saovmp_consts::numOfOps*saovmp_consts::slotSizeOS + 
@@ -281,7 +284,8 @@ void saovmp_model::nextFitSharing()
 						nfs_srv[activeServer].PI[pii] = true;
 					
 				nfs_srv[activeServer].cpuCap = nfs_srv[activeServer].cpuCap - nfs_vms[j].cpuReq;
-				nfs_srv[activeServer].memCap = nfs_srv[activeServer].memCap - nfs_vms[j].memReq + nfs_vms[j].sharing[activeServer];
+				nfs_srv[activeServer].memCap = nfs_srv[activeServer].memCap - nfs_vms[j].memReq + 
+							       nfs_vms[j].sharing[activeServer];
 				nfs_vms[j].suspend = true;
 				nfs_srv[activeServer].reduct = true;
 				allocated = true;
@@ -342,7 +346,8 @@ void saovmp_model::process_allocation(std::vector<vms_model> &(process_V), std::
 	}
 }
 
-void saovmp_model::initPrototype(std::vector<vms_model> (&input_V), std::vector<srv_model> (&input_S), std::string vmInputFile, std::string serverInputFile)
+void saovmp_model::initPrototype(std::vector<vms_model> 
+(&input_V), std::vector<srv_model> (&input_S), std::string vmInputFile, std::string serverInputFile)
 {
 	// Upload VMs for Experiment // 
 	std::ifstream open_vm(vmInputFile);
@@ -438,7 +443,8 @@ void saovmp_model::sharing_per_server(std::vector<vms_model> (&input_V), std::ve
 					input_V[j].sharing.at(k) = input_V[j].sharing.at(k) + 1;
 }
 
-void saovmp_model::server_resource_scarcity(std::vector<vms_model> &(calc_scarcity_V), std::vector<srv_model> &(calc_scarcity_S), algorithms strat)
+void saovmp_model::server_resource_scarcity
+(std::vector<vms_model> &(calc_scarcity_V), std::vector<srv_model> &(calc_scarcity_S), algorithms strat)
 {
 	double tempMEM(0.00);
 	double tempCPU(0.00);
@@ -697,27 +703,27 @@ void saovmp_model::generateResults(std::string inputVMFile, std::string inputSer
 		switch(algo_id)
 		{
 			case nfs	:  	std::cout << "NFS:\t" << comparator[algo_id] << "\t";
-							break;
-			case ffs		:  	std::cout << "FFS:\t" << comparator[algo_id] << "\t";
-							break;
+						break;
+			case ffs	:  	std::cout << "FFS:\t" << comparator[algo_id] << "\t";
+						break;
 			case bfs	:  	std::cout << "BFS:\t" << comparator[algo_id] << "\t";
-							break;						
+						break;						
 			case wfs	:  	std::cout << "WFS:\t" << comparator[algo_id] << "\t";
-							break;						
+						break;						
 			case rfs	:  	std::cout << "RFS:\t" << comparator[algo_id] << "\n";
-							break;						
+						break;						
 			case nf		:	std::cout << "NF :\t" << comparator[algo_id] << "\t";
-							break;
+						break;
 			case ff		:  	std::cout << "FF :\t" << comparator[algo_id] << "\t";
-							break;
+						break;
 			case bf		:  	std::cout << "BF :\t" << comparator[algo_id] << "\t";
-							break;						
+						break;						
 			case wf		:  	std::cout << "WF :\t" << comparator[algo_id] << "\t";
-							break;						
+						break;						
 			case rf		:  	std::cout << "RF :\t" << comparator[algo_id] << "\t";
-							break;						
+						break;						
 			default		:	
-							break;
+						break;
 		}
 	}	
 
@@ -728,7 +734,8 @@ void saovmp_model::generateResults(std::string inputVMFile, std::string inputSer
 	int inputMem(0);
 	int inputNumServ(0);
 	
-	std::cout << "\n\n******************** Total Active Servers Per Server Type ( CPU in Cores, MEM in GBs ) ********************\n\t\t";	
+	std::cout << 
+	"\n\n******************** Total Active Servers Per Server Type ( CPU in Cores, MEM in GBs ) ********************\n\t\t";	
 	while(getServerTypeInfo >> inputCPU >> inputMem >> inputNumServ)
 		std::cout << "(" << inputCPU << " , " << inputMem << ")\t";
 	getServerTypeInfo.close();
@@ -738,27 +745,27 @@ void saovmp_model::generateResults(std::string inputVMFile, std::string inputSer
 		switch(algo_id)
 		{
 			case nfs	:  	std::cout << "\nNFS:\t\t";
-							break;
-			case ffs		:  	std::cout << "\nFFS:\t\t";
-							break;
+						break;
+			case ffs	:  	std::cout << "\nFFS:\t\t";
+						break;
 			case bfs	:  	std::cout << "\nBFS:\t\t";
-							break;						
+						break;						
 			case wfs	:  	std::cout << "\nWFS:\t\t";
-							break;						
+						break;						
 			case rfs	:  	std::cout << "\nRFS:\t\t";
-							break;						
+						break;						
 			case nf		:	std::cout << "\nNF :\t\t";
-							break;
+						break;
 			case ff		:  	std::cout << "\nFF :\t\t";
-							break;
+						break;
 			case bf		:  	std::cout << "\nBF :\t\t";
-							break;						
+						break;						
 			case wf		:  	std::cout << "\nWF :\t\t";
-							break;						
+						break;						
 			case rf		:  	std::cout << "\nRF :\t\t";
-							break;						
+						break;						
 			default		:	
-							break;
+						break;
 		}
 
 		for(int i = 0; i < saovmp_consts::SERVER_TYPES; i++)
