@@ -471,16 +471,16 @@ void saovmp_model::server_resource_scarcity
 				{
 					case bfs:	
 					case bf:	if(tempCPU > tempMEM)
-									calc_scarcity_V[j].scarcity[k] = tempCPU;
-								else
-									calc_scarcity_V[j].scarcity[k] = tempMEM;
-								break;
+								calc_scarcity_V[j].scarcity[k] = tempCPU;
+							else
+								calc_scarcity_V[j].scarcity[k] = tempMEM;
+							break;
 					case wfs:	
 					case wf:	if(tempCPU < tempMEM)
-									calc_scarcity_V[j].scarcity[k] = tempCPU;
-								else
-									calc_scarcity_V[j].scarcity[k] = tempMEM;
-								break;	
+								calc_scarcity_V[j].scarcity[k] = tempCPU;
+							else
+								calc_scarcity_V[j].scarcity[k] = tempMEM;
+							break;	
 				}	
 			}
 		}
