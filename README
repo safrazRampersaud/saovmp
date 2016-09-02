@@ -15,7 +15,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	See (IV) and (V) for more details.
 		
 (III)	.hpp files: [HPP]
-	(a)	saovmp_consts.hpp 	- stores constant values throughout saovmp simulation in namespace
+	(a)	saovmp_consts.hpp 	- namespace constant values throughout saovmp simulation
 	(b)	saovmp_model.hpp	- stores all sharing-(aware/oblivious) algorithms for 
 					  simulation and processes the results for reporting
 	(c)	srv_model.hpp		- server abstraction file for saovmp simulation 
@@ -48,9 +48,9 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 				server resource combination in 3rd column
 									  
 (V)	Three folders have been uploaded for the variations on the VM request input abstraction:
-		(a)	300		- 11 various vm input files consisting of 300 VMs in input 
-		(b) 	500		- 11 various vm input files consisting of 500 VMs in input
-		(c)	1000		- 11 various vm input files consisting of 1000 VMs in input						
+		(a)	300		- 11 various vm input files consisting of 300 VMs 
+		(b) 	500		- 11 various vm input files consisting of 500 VMs
+		(c)	1000		- 11 various vm input files consisting of 1000 VMs						
 									  
 		Each of the files consists of the following data orginization:
 			(1)	VM type from Google Compute Engine (abstracted) in the 1st column
