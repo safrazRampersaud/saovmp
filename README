@@ -26,7 +26,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 					  (abstracted) VMs may choose thoughout experiment
 	(b)	VM_assign_EnumAP	- Constraint array file for identifying applications 
 					  (abstracted) VMs may choose thoughout experiment
-	(c)	VM_assign_OS		- Constraint matrix file for identifying OSs (abstracted) VMs may choose
+	(c)	VM_assign_OS		- Constraint matrix file for identifying OSs (abstracted)
 	(d)	getApplicationPages 	- Component file for application (abstracted) pages 
 					  expressed in bits
 	(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages 
