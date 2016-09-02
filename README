@@ -19,7 +19,7 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 	(b)	saovmp_model.hpp	- stores all sharing-(aware/oblivious) algorithms for 
 					  simulation and processes the results for reporting
 	(c)	srv_model.hpp		- server abstraction file for saovmp simulation 
-	(c)	vms_model.hpp		- virtual machine (vm) abstraction file for saovmp 
+	(d)	vms_model.hpp		- virtual machine (vm) abstraction file for saovmp 
 					  simulation including vm characteristic loading
 	resource files: [RESOURCES]
 	(a)	VM_assign_AP		- Constraint matrix file for identifying applications 
@@ -31,9 +31,9 @@ README CONTENT FILE FOR SHARING-AWARE ONLINE VIRTUAL MACHINE PACKING (saovmp) SI
 					  expressed in bits
 	(e)	getOperatingSystemPages - Component file for operating system (abstracted) pages 
 					  expressed in bits
-	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs (abstracted)
+	(f)	vmTypes			- Enumeration file for Google Compute Engine VMs
 
-(IV)	Three data files have been uploaded for the variations in the server environment abstraction:
+(IV)	Three data files have been uploaded for variate server environment abstractions:
 		(a)	serverExp_300	- Server file consisting of 300 servers 
 					  with identified capacities on CPUs & Memory
 		(b)	serverExp_500	- Server file consisting of 500 servers 
